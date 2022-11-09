@@ -1,0 +1,571 @@
+
+
+#background {
+
+            width: 1510px;
+
+            background-color: rgb(25, 25, 70);
+ 
+
+}
+
+#background > hr{
+
+     border: none;
+
+     border-bottom: 2px solid rgba(8, 54, 104, 0.697);
+
+     width: 1400px;
+
+     margin: auto;
+
+     margin-top: 110px;
+
+
+}
+
+
+
+
+#discount-Section {
+
+   display: flex;
+
+   justify-content: center;
+
+   align-items: center;
+
+   height: 50px;
+
+   position: fixed;
+
+   width: 1510px;
+
+   z-index: 1;
+
+   background-color: rgb(1, 39, 104);
+
+
+
+}
+
+
+#discount-Section > ul {
+
+  
+   width: 1400px;
+
+   display: flex;
+
+   justify-content: space-around;
+
+   color: white;
+
+   font-size: large;
+
+   list-style: none;
+
+
+
+}
+
+#discount-Section > ul > li{
+
+        width: 110px;
+
+        text-align: center;
+
+        background-color: rgb(36, 3, 68);
+
+        padding: 2px;
+
+        border-top-left-radius: 40px;
+
+        border-bottom-right-radius: 40px;
+
+        box-shadow: 2px 2px 10px rgb(36, 3, 68);
+}
+
+#heading{
+
+      margin: auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      margin-top: 30px;
+
+      display: flex;
+
+      width: 1390px;
+
+}
+
+#heading > button{
+
+    padding: 10px;
+
+    width: 200px;
+
+    height: 40px;
+
+    font-size: larger;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    border: 2px solid rgb(0, 183, 255);
+
+    background-color: rgb(10, 10, 52);
+
+    color: antiquewhite;
+
+}
+
+#heading > button:hover{
+
+       background-color: rgba(6, 95, 95, 0.592);
+
+       box-shadow: 1px 1px 5px rgb(0, 225, 255);
+
+}
+
+
+#heading > p {
+
+     color: white;
+
+     background-color: rgba(26, 25, 71, 0.722);
+     
+     width: 720px;
+
+     padding-right: 10px;
+
+     padding-left: 10px;
+
+     padding-top: 5px;
+
+     padding-bottom: 5px;
+
+     border-radius: 20px;
+
+     font-size: 25px;
+
+
+
+}
+
+
+
+#Product-section1 {
+
+    /* border: 2px solid green; */
+
+    width: 1370px;
+
+    margin: auto;
+
+    margin-top: 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    gap: 30px;
+
+
+}
+
+
+
+#Product-section1 > div {
+
+    border: 2px solid rgba(0, 0, 0, 0.518);
+
+    box-shadow: 2px 2px 10px;
+
+    border-radius: 10px;
+  
+
+}
+
+
+#Product-image {
+
+     /* border: 2px solid red; */
+
+     width: 200px;
+
+     width: 93%;
+
+     text-align: center;
+
+     padding: 10px;
+
+     background-color: rgba(1, 2, 72, 0.367);
+
+     overflow: hidden;
+
+  
+
+     
+
+
+}
+
+
+#Product-image > img {
+
+      width: 90%;
+
+      border-radius: 20px;
+
+      cursor: pointer;
+      
+     transition: 0.6s ;
+
+     box-shadow: 2px 2px 10px ;
+
+
+}
+
+#Product-image > img:hover{
+
+        transform: scale(1.3);
+
+
+}
+
+#info {
+
+    border: 2px solid rgb(0, 255, 149);
+
+    height: 120px;
+
+    color: white;
+
+    width: 90%;
+
+    margin: auto;
+
+    text-align: center;
+
+    text-overflow: ellipsis;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 10px rgb(0, 0, 20);
+
+    
+    margin-bottom: 20px;
+
+
+}
+
+#info > p{
+
+      color: rgb(121, 119, 119);
+
+}
+
+#info > h3{
+
+       margin-bottom: 10px;
+
+}
+
+
+#intro {
+
+    /* border: 2px solid red; */
+
+    margin: auto;
+
+    margin-top: 40px;
+
+    width: 1400px;
+
+    padding: 10px;
+
+    display: flex;
+
+    background-color: aqua;
+
+}
+
+
+
+#categories {
+
+      /* border: 2px solid yellow; */
+
+      background-color: rgb(13, 21, 90);
+
+      border-radius: 10px;
+
+      width: 250px;
+
+      padding-left: 50px;
+
+      color: white;
+
+      border: 2px solid rgb(2, 193, 161);
+
+
+
+}
+
+#categories > ul {
+
+      list-style: none;
+
+      /* border: 2px solid green; */
+
+      width: 80%;
+
+      padding-left: 0px;
+
+      text-align: center;
+
+
+}
+
+#categories > ul > h3{
+
+        text-align: center;
+
+        margin-bottom: 10px;
+
+        margin-top: 20px;
+
+        border: 2px solid rgb(39, 53, 109);
+
+        border-radius: 10px;
+
+
+}
+
+#categories > ul > li {
+
+         text-decoration: underline;
+
+         margin-bottom: 10px;
+
+}
+
+#categories > ul > li:hover{
+
+
+                color: rgba(6, 206, 246, 0.766);
+
+}
+
+
+#poster {
+/* 
+    border: 2px solid green; */
+
+    height: 300px;
+
+    width: 900px;
+
+    margin-left: 60px;
+
+    position: relative;
+
+    margin-top: 120px;
+  
+
+}
+
+
+#intro > div > img {
+
+
+    width: 100%;
+
+    border-top-left-radius: 100px;
+
+    border-bottom-right-radius: 100px;
+
+    border: 2px solid rgb(3, 252, 219);
+
+    box-shadow: 5px 5px 20px black;
+
+    
+
+}
+
+
+#poster > h2{
+
+
+        position: absolute;
+
+        top: 300px;
+
+        font-size: 45px;
+
+        left: 250px;
+
+        color: rgb(255, 255, 255);
+
+        text-shadow: 2px 2px 2px black;
+
+}
+
+
+#poster > p {
+
+    position: absolute;
+
+    top: 360px;
+
+    left: 360px;
+
+    font-size: large;
+
+    color: rgb(255, 255, 255);
+  
+    text-shadow: 2px 2px 2px black;
+
+}
+
+
+#poster > button {
+
+    position: absolute;
+
+    top: 390px;
+
+    left: 350px;
+
+    font-size: 22px;
+
+    width: 200px;
+
+    padding: 10px;
+
+
+    border-radius: 10px;
+
+
+}
+
+#poster > button:hover{
+
+     color: rgb(0, 255, 60);
+
+     border:2px solid green
+
+
+}
+
+#bottom-section {
+
+    border: 2px solid green;
+
+    margin: auto;
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    color: white;
+
+    height: 300px;
+
+    padding: 10px;
+
+    width: 1200px;
+
+    background-color: rgb(3, 86, 109);
+
+    box-shadow: 3px 3px 20px black;
+
+    margin-top: 100px;
+
+
+
+}
+
+
+#bottom-section > p {
+
+
+         font-size: 20px;
+
+         margin-top: 20px;
+
+
+
+}
+
+
+#bottom-section-2 {
+
+
+          /* border: 2px solid green; */
+
+          width: 1200px;
+
+          margin: auto;
+
+          margin-top: 100px;
+
+          display: flex;
+
+          gap: 20px;
+
+          padding: 20px;
+}
+
+
+#bottom-section-2  > div {
+
+    
+        border: 2px solid rgb(0, 255, 174);
+
+        width: 400px;
+
+        padding: 40px 20px 40px 20px;
+
+        color: white;
+
+        border-radius: 20px;
+
+        box-shadow: 2px 2px 20px black;
+}
+
+#bottom-section-2  > div > h3{
+
+        margin-top: 10px;
+
+        margin-bottom: 20px;
+
+}
+
+#bottom-section-2  > div:hover{
+
+    background-color: rgb(40, 40, 114);
+
+    cursor: pointer;
+
+
+}

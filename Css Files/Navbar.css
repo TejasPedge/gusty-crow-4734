@@ -107,6 +107,8 @@ nav{
     
     border-color: rgb(18, 152, 255);
 
+    cursor: pointer;
+
 }
 
 #Search{
@@ -184,6 +186,8 @@ nav{
 .material-symbols-rounded:hover{
 
     color: rgb(0, 179, 255);
+
+    cursor: pointer;
 
 
 }

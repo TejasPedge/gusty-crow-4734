@@ -1,28 +1,51 @@
 
 
- let Product_Data = JSON.parse (localStorage.getItem("Show-More-Data"));
+ let Product_Data = JSON.parse (localStorage.getItem("Show-More-Data"));  // done
 
 
- let Filter_Accessories =  JSON.parse (localStorage.getItem("Accessories"));
+ let Filter_Accessories =  JSON.parse (localStorage.getItem("Accessories"));  // done
 
- let Filter_Knitwear = JSON.parse(localStorage.getItem("Knitwear"));
+ let Filter_Knitwear = JSON.parse(localStorage.getItem("Knitwear"));  //done
 
- let Fiter_Trousers = JSON.parse(localStorage.getItem("Trousers"));
+ let Fiter_Trousers = JSON.parse(localStorage.getItem("Trousers")); //done
 
- let Fiter_Shoes = JSON.parse(localStorage.getItem("Shoes"));
+ let Fiter_Shoes = JSON.parse(localStorage.getItem("Shoes"));  //done
 
- let Fiter_Shorts = JSON.parse(localStorage.getItem("Shorts"));
+ let Fiter_Shorts = JSON.parse(localStorage.getItem("Shorts"));  //done
 
- let Sort_Recommended = JSON.parse(localStorage.getItem("Recommended"));
+ let Sort_Recommended = JSON.parse(localStorage.getItem("Recommended"));  ////////pending////////
 
- let Sort_Low_price = JSON.parse(localStorage.getItem("Sort_jacket_Low-High"));
+ let Sort_Low_price = JSON.parse(localStorage.getItem("Sort_jacket_Low-High")); //done
 
- let Sort_High_price = JSON.parse(localStorage.getItem("Sort_jacket_High-Low"));
+ let Sort_High_price = JSON.parse(localStorage.getItem("Sort_jacket_High-Low")); //done
 
- let Sort_Accessories_Low = JSON.parse(localStorage.getItem("Sort_Accessories_Low-High"));
+ let Sort_Accessories_Low = JSON.parse(localStorage.getItem("Sort_Accessories_Low-High")); //done
 
- let Sort_Accessories_High = JSON.parse(localStorage.getItem("Sort_Accessories_High-Low"));
+ let Sort_Accessories_High = JSON.parse(localStorage.getItem("Sort_Accessories_High-Low")); //done
 
+ let Sort_Knitwear_Low_High = JSON.parse(localStorage.getItem("Sort_Knitwear_Low-High")); //done
+
+ let Sort_Knitwear_High_Low = JSON.parse(localStorage.getItem("Sort_Knitwear_High-Low")); //done
+
+ let Sort_Trousers_Low_High = JSON.parse(localStorage.getItem("Sort_Trousers_Low-High")); //done
+
+ let Sort_Trousers_High_Low = JSON.parse(localStorage.getItem("Sort_Trousers_High-Low")); //done
+
+ let Sort_Shoes_Low_High = JSON.parse(localStorage.getItem("Sort_Shoes_Low-High")); //done
+
+ let Sort_Shoes_High_Low = JSON.parse(localStorage.getItem("Sort_Shoes_High-Low")); //done
+
+ let Sort_Shorts_Low_High = JSON.parse(localStorage.getItem("Sort_Shorts_Low-High")); //done
+
+ let Sort_Sorts_High_Low = JSON.parse(localStorage.getItem("Sort_Shorts_High-Low"));
+
+
+
+
+
+
+ 
+ 
 
 
 console.log (Product_Data.products);
@@ -87,7 +110,7 @@ console.log (Product_Data.products);
 
                                    let H4 = document.createElement("h4");
 
-                                   H4.innerText = arr[i].price;
+                                   H4.innerText = "Rs. " + arr[i].price;
 
                             Div4.append(H3,H4);
 
@@ -103,8 +126,25 @@ console.log (Product_Data.products);
                                     let Button2 = document.createElement("button");
 
                                     Button2.innerText = "Add To Wishlist";
+
+
+                                // // // // //  Add to Wishlist Function  // // // // // 
+
+
+                                Button2.addEventListener("click", function () {
+
+                                     
+                                         AddtoWishlist(arr[i]);
+
+
+                                })
+
+
+
                                     
                             Div5.append(Button,Button2);
+
+
 
                            
 
@@ -181,10 +221,57 @@ console.log (Product_Data.products);
 
                 DisplayData(Sort_Accessories_High.products);
 
+        }else if (filtervalue == "b" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Knitwear_Low_High.products);
+
+        }else if (filtervalue == "b" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Knitwear_High_Low.products);
+
+        }else if (filtervalue == "c" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Trousers_Low_High.products);
+
+        }else if (filtervalue == "c" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Trousers_High_Low.products);
+
+        }else if (filtervalue == "d" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Shoes_Low_High.products);
+
+        }else if (filtervalue == "d" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Shoes_High_Low.products);
+
+        }else if (filtervalue == "e" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Shorts_Low_High.products);
+
+        }else if (filtervalue == "e" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData( Sort_Sorts_High_Low.products);
+
         }else if (filtervalue == "a") {
 
 
-                
                 document.getElementById("cards").innerHTML = "";
 
                 DisplayData(Filter_Accessories.products);
@@ -286,9 +373,55 @@ function  Sortit () {
 
                 DisplayData(Sort_Accessories_High.products);
 
+        }else if (filtervalue == "b" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Knitwear_Low_High.products);
+
+        }else if (filtervalue == "b" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Knitwear_High_Low.products);
+
+        }else if (filtervalue == "c" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Trousers_Low_High.products);
+
+        }else if (filtervalue == "c" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Trousers_High_Low.products);
+
+        }else if (filtervalue == "d" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Shoes_Low_High.products);
+
+        }else if (filtervalue == "d" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Shoes_High_Low.products);
+
+        }else if (filtervalue == "e" && Sort_value == "a") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData(Sort_Shorts_Low_High.products);
+
+        }else if (filtervalue == "e" && Sort_value == "b") {
+
+                document.getElementById("cards").innerHTML = "";
+
+                DisplayData( Sort_Sorts_High_Low.products);
+
         }
-
-
 
 
 
@@ -297,7 +430,69 @@ function  Sortit () {
 
 
 
+// // // // // // //   AD To Wishlist Function Declaration   // // // // // // // //
+
+
+let Wishlist_Data = JSON.parse(localStorage.getItem("Wishlist-Data")) || [];
 
 
 
-//     localStorage.setItem("Sort_Accessories_High-Low",JSON.stringify(obj));
+
+
+   function AddtoWishlist ( element ) {
+
+
+        let flag = "Item Added To Wishlist";
+
+
+        for (let i = 0; i < Wishlist_Data.length; i++ ) {
+
+
+                if ( Wishlist_Data[i] == element) {
+
+
+                        flag = "Item Is Already Present in Wishlist";
+
+                        break;
+
+
+                }
+
+
+
+        }
+
+
+
+        if (flag == "Item Added To Wishlist") {
+
+              
+                Wishlist_Data.push(element);
+
+
+                localStorage.setItem("Wishlist-Data",  JSON.stringify( Wishlist_Data )); 
+
+
+
+
+
+        }
+
+
+        alert (flag);
+                 
+           
+
+            console.log (Wishlist_Data);
+
+
+   }
+
+
+
+
+
+
+
+
+//    localStorage.setItem("Sort_Shorts_High-Low",JSON.stringify(obj));

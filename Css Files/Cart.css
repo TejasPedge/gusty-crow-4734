@@ -259,11 +259,7 @@
   }
 
 
-  #pay{
-/* 
-    border: 2px solid red; */
-
-  }
+ 
 
   #pay > button {
 
@@ -381,7 +377,7 @@
 
     border: 2px solid rgb(0, 255, 217);
 
-    width: 60%;
+    width: 100%;
 
     height: 200px;
 
@@ -395,6 +391,8 @@
 
     box-shadow: 2px 2px 20px;
 
+    margin-bottom: 30px;
+
   
 
 
@@ -406,11 +404,13 @@
 
      /* border: 2px solid violet; */
 
-     width: 25%;
+     width: 24%;
 
      color: white;
 
      margin-top: 20px;
+
+     padding-left: 10px;
 
 
 }
@@ -541,3 +541,15 @@
 
 
 }
+
+
+
+/* 
+#Card-products-container {
+
+         border: 2px solid green;
+
+
+
+
+}  */

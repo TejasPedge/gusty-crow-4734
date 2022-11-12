@@ -1,43 +1,81 @@
 
 
- let Product_Data = JSON.parse (localStorage.getItem("Show-More-Data"));  // done
+ let Product_Data = JSON.parse (localStorage.getItem("Show-More-Data"));  // done //done
 
 
- let Filter_Accessories =  JSON.parse (localStorage.getItem("Accessories"));  // done
+ let Filter_Accessories =  JSON.parse (localStorage.getItem("Accessories"));  // done //done
 
- let Filter_Knitwear = JSON.parse(localStorage.getItem("Knitwear"));  //done
+ let Filter_Knitwear = JSON.parse(localStorage.getItem("Knitwear"));  //done  //done
 
- let Fiter_Trousers = JSON.parse(localStorage.getItem("Trousers")); //done
+ let Fiter_Trousers = JSON.parse(localStorage.getItem("Trousers")); //done  //done
 
- let Fiter_Shoes = JSON.parse(localStorage.getItem("Shoes"));  //done
+ let Fiter_Shoes = JSON.parse(localStorage.getItem("Shoes"));  //done //done
 
- let Fiter_Shorts = JSON.parse(localStorage.getItem("Shorts"));  //done
+ let Fiter_Shorts = JSON.parse(localStorage.getItem("Shorts"));  //done //done
 
  let Sort_Recommended = JSON.parse(localStorage.getItem("Recommended"));  ////////pending////////
 
- let Sort_Low_price = JSON.parse(localStorage.getItem("Sort_jacket_Low-High")); //done
+ let Sort_Low_price = JSON.parse(localStorage.getItem("Sort_jacket_Low-High")); //done //done
 
- let Sort_High_price = JSON.parse(localStorage.getItem("Sort_jacket_High-Low")); //done
+ let Sort_High_price = JSON.parse(localStorage.getItem("Sort_jacket_High-Low")); //done //done
 
- let Sort_Accessories_Low = JSON.parse(localStorage.getItem("Sort_Accessories_Low-High")); //done
+ let Sort_Accessories_Low = JSON.parse(localStorage.getItem("Sort_Accessories_Low-High")); //done //done
 
- let Sort_Accessories_High = JSON.parse(localStorage.getItem("Sort_Accessories_High-Low")); //done
+ let Sort_Accessories_High = JSON.parse(localStorage.getItem("Sort_Accessories_High-Low")); //done //done
 
- let Sort_Knitwear_Low_High = JSON.parse(localStorage.getItem("Sort_Knitwear_Low-High")); //done
+ let Sort_Knitwear_Low_High = JSON.parse(localStorage.getItem("Sort_Knitwear_Low-High")); //done  //done
 
- let Sort_Knitwear_High_Low = JSON.parse(localStorage.getItem("Sort_Knitwear_High-Low")); //done
+ let Sort_Knitwear_High_Low = JSON.parse(localStorage.getItem("Sort_Knitwear_High-Low")); //done //done
 
- let Sort_Trousers_Low_High = JSON.parse(localStorage.getItem("Sort_Trousers_Low-High")); //done
+ let Sort_Trousers_Low_High = JSON.parse(localStorage.getItem("Sort_Trousers_Low-High")); //done //done
 
- let Sort_Trousers_High_Low = JSON.parse(localStorage.getItem("Sort_Trousers_High-Low")); //done
+ let Sort_Trousers_High_Low = JSON.parse(localStorage.getItem("Sort_Trousers_High-Low")); //done //done
 
- let Sort_Shoes_Low_High = JSON.parse(localStorage.getItem("Sort_Shoes_Low-High")); //done
+ let Sort_Shoes_Low_High = JSON.parse(localStorage.getItem("Sort_Shoes_Low-High")); //done //done
 
- let Sort_Shoes_High_Low = JSON.parse(localStorage.getItem("Sort_Shoes_High-Low")); //done
+ let Sort_Shoes_High_Low = JSON.parse(localStorage.getItem("Sort_Shoes_High-Low")); //done //done
 
- let Sort_Shorts_Low_High = JSON.parse(localStorage.getItem("Sort_Shorts_Low-High")); //done
+ let Sort_Shorts_Low_High = JSON.parse(localStorage.getItem("Sort_Shorts_Low-High")); //done  //done
 
- let Sort_Sorts_High_Low = JSON.parse(localStorage.getItem("Sort_Shorts_High-Low"));
+ let Sort_Sorts_High_Low = JSON.parse(localStorage.getItem("Sort_Shorts_High-Low")); //done //done
+
+
+
+
+
+
+//  // // // // // // // Function for adding Quantity key to object with value // // // // // // // // // // // // // // //
+
+
+    //   function AddQuantity(arr) {
+
+    //          let N = arr.length;
+
+    //          for (let i = 0; i < N; i++) {
+
+
+    //                    arr[i].Quantity  = 1
+
+
+
+
+    //          }
+
+            
+
+    //   }
+
+
+
+
+    //   AddQuantity (Product_Data.products);
+
+
+    //   localStorage.setItem("Show-More-Data", JSON.stringify( Product_Data  ) );
+
+
+
+
 
 
 
@@ -137,7 +175,21 @@ console.log (Product_Data.products);
                                          AddtoWishlist(arr[i]);
 
 
-                                })
+                                });
+
+
+                                // // // // //  Add To Cart Function  // // // // //
+
+
+                                Button.addEventListener("click", function () {
+
+                                     
+                                        AddtoCart(arr[i]);
+
+
+
+
+                               });
 
 
 
@@ -190,6 +242,16 @@ console.log (Product_Data.products);
            let filtervalue = document.getElementById("Filter").value;
 
            let Sort_value =  document.getElementById("Sort").value;
+
+
+           console.log (filtervalue)
+
+
+           console.log (Sort_value)
+
+
+           console.log(Filter_Accessories )
+
 
 
 
@@ -269,7 +331,7 @@ console.log (Product_Data.products);
 
                 DisplayData( Sort_Sorts_High_Low.products);
 
-        }else if (filtervalue == "a") {
+        }else if (filtervalue == "a" &&  Sort_value == "" ) {
 
 
                 document.getElementById("cards").innerHTML = "";
@@ -494,5 +556,69 @@ let Wishlist_Data = JSON.parse(localStorage.getItem("Wishlist-Data")) || [];
 
 
 
+   // // // // // // //   AD To Cart Function Declaration   // // // // // // // //
 
-//    localStorage.setItem("Sort_Shorts_High-Low",JSON.stringify(obj));
+
+   let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
+
+
+
+
+
+    function  AddtoCart (element) {
+
+
+
+        let flag = "Item Added To Cart";
+
+
+        for (let i = 0; i < Cart_Data.length; i++ ) {
+
+
+                if ( Cart_Data[i] == element) {
+
+
+                        flag = "Item Is Already Present in Cart";
+
+                        break;
+
+
+                }
+
+
+
+        }
+
+
+
+        if (flag == "Item Added To Cart") {
+
+
+              
+              
+                Cart_Data.push(element);
+
+
+                localStorage.setItem("Cart-Data",  JSON.stringify( Cart_Data )); 
+
+
+        }
+
+
+        alert (flag);
+                 
+           
+
+            console.log (Cart_Data);
+
+
+
+    }
+
+
+
+
+
+
+
+//    localStorage.setItem("Shoes",JSON.stringify(obj));

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+   <style>
+
+
+      *{
+
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+
+          #Payment {
+
+                    border: 2px solid green;
+
+                    
+
+                    width: 400px;
+
+                    margin: auto;
+
+                    margin-top: 60px;
+
+                    height: 500px;
+
+                    padding: 20px;
+
+                    box-shadow: 2px 4px 10px gray;
+
+                    background-color: rgb(34, 255, 0);
+
+          }
+
+
+          h2{
+
+
+            text-align: center;
+          }
+
+
+
+          form {
+
+               width: 90%;
+
+               margin: auto;
+
+               margin-top: 20px;
+          
+               text-align: center;
+
+          }
+
+
+          input {
+
+                width: 90%;
+
+                padding: 10px;
+
+                margin-top: 20px;
+
+                margin-bottom: 10px;
+
+                border-radius: 10px;
+
+                font-size: large;
+
+          }
+
+          label{
+
+                 font-size: large;
+
+                 font-weight: 600;
+
+          }
+
+          button{
+
+            width: 90%;
+
+            padding: 10px;
+
+            margin-top: 20px;
+
+            margin-bottom: 10px;
+
+            border-radius: 10px;
+
+            font-size: large;
+
+            margin-left : 20px
+
+
+          }
+
+         button:hover{
+
+                    background-color: green;
+
+                    color: white;
+
+          }
+
+
+
+   </style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+          <h2>Payment GateWay</h2>
+    
+          <div id="Payment">
+
+
+                  <form action="">
+
+                      
+                           <input type="text" placeholder="Enter Name"> <br>
+
+                           <input type="number" placeholder="Enter Debit Card Number"> <br>
+
+                           <label for="">Enter Expiry Date</label> <br>
+
+                           <input type="date"> <br>
+
+                           <input type="cvv" placeholder="Enter CVV"> <br>
+
+
+                  </form>
+
+                  
+                  <a >  <button>Make Payment</button> </a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+ 
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+
+   document.querySelector("button").addEventListener("click",myfun);
+
+     
+   let [a,b,c,d] = document.querySelectorAll("input");
+
+   let CardDetails = [
+
+                     {card : "2345678912",
+                      expDate : "2024-10-28",
+                      cvv : "322"},
+
+                      {card : "5675334455",
+                      expDate : "2024-07-25",
+                      cvv : "556"},
+
+                      {card : "6456676755",
+                      expDate : "2023-03-10",
+                      cvv : "234"},
+
+                      {card : "565556564546",
+                      expDate : "2024-05-20",
+                      cvv : "456"}
+
+                      ]
+
+
+ function  myfun (event) {
+
+    let bag = "";
+
+    for (let i = 0; i < CardDetails.length; i++) {
+
+        if (b.value == CardDetails[i].card && c.value == CardDetails[i].expDate && d.value == CardDetails[i].cvv ){
+
+                document.querySelector("a").setAttribute("href","OTP.html");
+
+                bag = "Redirecting To Next Page, Enter Otp There";
+
+        }else if (b.value != CardDetails[i].card && b.value != "" && c.value != CardDetails[i].expDate && c.value != "" && d.value != CardDetails[i].cvv && d.value != "" ) {
+
+                bag = "Wrong Credientials";
+
+        }else if (b.value != CardDetails[i].card && b.value != "") {
+
+                 bag = "Please Enter Correct Debit Card Number";
+
+                 console.log(b.value)
+
+        }else if (c.value != CardDetails[i].expDate && c.value != "") {
+
+                 bag = "Wrong Expiry Date"
+
+        }else if (d.value != CardDetails[i].cvv && d.value != "") {
+
+                 bag = "Wrong CVV";
+
+        }else {
+
+                bag = "Please Fill all the Details";
+
+        }
+
+      
+
+    }
+
+    
+
+    
+    alert(bag);
+
+
+
+
+
+
+
+   }
+
+
+    
+
+
+
+
+
+
+</script>

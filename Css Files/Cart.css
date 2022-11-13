@@ -46,9 +46,9 @@
 
  #Card-product-container{
 
-
+/* 
        border: 2px solid green;
-
+ */
 
        padding-top: 70px;
 
@@ -64,7 +64,7 @@
   #Card-product-container2{
 
 
-           border: 2px solid red;
+           /* border: 2px solid red; */
 
            width: 90%;
 
@@ -271,13 +271,29 @@
 
             color: white;
 
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0);
 
             box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.495);
 
             border-radius: 5px;
 
             margin-bottom: 10px;
+
+            border: 1px solid rgb(255, 255, 255);
+
+          
+  }
+
+
+  #pay > button:hover {
+
+    
+
+      cursor:pointer;
+
+
+      background-color: rgba(0, 0, 0, 0.716);
+
 
   }
 
@@ -553,3 +569,215 @@
 
 
 }  */
+
+
+
+#Discound-applied {
+
+
+
+      width: 150px;
+
+      position: absolute;
+
+      height: 22px;
+
+      top: 520px;
+
+      left: 1002px;
+
+      display: flex;
+
+
+      align-items: center;
+
+     
+      justify-content: space-between;
+
+      align-items: center;
+
+      background-color: rgb(7, 78, 149);
+
+      border-radius: 30px;
+
+      padding-left:10px ;
+
+      padding-right: 5px;
+
+      border: 1px solid rgba(0, 255, 208, 0.522);
+
+      box-shadow: 2px 2px 10px;
+
+
+
+}
+
+
+#Discound-applied > .material-symbols-rounded {
+
+  color: black;
+
+}
+
+#Discound-applied > img {
+
+
+   width: 70px;
+
+}
+
+
+#Discound-applied > h3{
+
+
+        padding: 0px;
+
+        margin: 0px;
+
+}
+
+#Discound-applied >span:hover{
+
+    color: rgb(0, 255, 149);
+
+
+}
+
+
+
+
+
+#No-Card-products {
+
+
+  border: 2px solid rgb(0, 255, 217);
+
+  width: 700px;
+
+  height: 200px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content:center ;
+
+
+
+
+
+  padding: 10px;
+
+  border-radius: 20px;
+
+  box-shadow: 2px 2px 20px;
+
+  margin-bottom: 30px;
+
+}
+
+
+#No-Card-products >h1{
+
+           color: white;
+
+
+           margin-left: 20px ;
+
+           margin-bottom: 10px;
+           
+
+
+}
+
+
+#No-Card-products > p {
+
+ 
+     color: white;
+
+     
+     margin-left: 20px ;
+
+     margin-bottom: 20px;
+
+}
+
+
+#No-Card-products > button {
+
+
+        width: 40%;
+
+        padding: 10px;
+
+        font-size: larger;
+
+           
+        margin-left: 20px ;
+
+        background-color: black;
+
+        color: aliceblue;
+
+        border: 2px solid gray;
+
+        font-weight: 600;
+
+        border-radius: 10px;
+
+
+}
+
+
+
+#No-Card-products > button:hover{
+
+
+               background-color: rgba(17, 5, 36, 0.613);
+
+               cursor: pointer;
+
+
+}
+
+
+
+
+
+
+#pay > a > button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  font-size: larger;
+
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.495);
+
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid rgb(255, 255, 255);
+
+
+}
+
+
+#pay > a > button:hover {
+
+
+
+cursor:pointer;
+
+
+background-color: rgba(0, 0, 0, 0.716);
+
+
+}

@@ -24,6 +24,8 @@
 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
 
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,700,0,0" />
 <!-- 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
  -->
@@ -63,8 +65,8 @@
           <input type="search" placeholder="Search">
 
           <span class="material-symbols-rounded">
-              search
-              </span>
+            search
+            </span>
 
        
 
@@ -350,6 +352,27 @@
 
 
 
+                                                 
+                                                 <!-- <div id="No-Card-products">
+
+                                                         
+                                                            <H1>Your Shopping Cart Is Empty</H1>
+
+                                                           <p>Sign in to save or access already saved items in your shopping bag.
+                                                      </p> 
+
+                                                      <button>Sign in</button>
+
+
+
+
+
+
+
+
+                                                    </div> -->
+
+
 
 
 
@@ -393,9 +416,9 @@
 
                                                           <p>Add a discount Code </p>
 
-                                                          <input type="text">
+                                                          <input id = "Coupon-code" type="text">
 
-                                                          <button> Add </button>
+                                                          <button id="Add"> Add </button>
 
                                                           <p>Log in to use your personal offers!</p><br>
 
@@ -417,17 +440,45 @@
 
                                                                          <h4>Delivery</h4>
 
-                                                                         <h4>Rs. 00</h4>
+                                                                         <h4 id="Delivery-Charge">Rs. 00</h4>
                                                                   </div>
 
                                                                   <div>
 
                                                                           <h4>Discount</h4>
 
-                                                                          <h4>-Rs. 00</h4>
+                                                                          <h4 id="Discount">- Rs. 0.00</h4>
+
+
+
+
+
                                                                   </div>
 
                                                           </div>
+
+
+                                                                <div id="coupons">
+<!-- 
+                                                                 <div id="Discound-applied">
+
+                                                                         
+
+                                                                          <img src="https://thelogofinder.com/wp-content/uploads/edd/2022/03/Masai.svg" alt="">
+
+                                                                          <h3>2000</h3>
+
+                                                                          <span class="material-symbols-rounded">
+                                                                              close
+                                                                              </span>
+
+
+
+
+                                                                                          
+                                                                  </div> -->
+
+                                                            </div>
 
                                                           <hr>
 
@@ -436,7 +487,7 @@
 
                                                                 <h3>TOTAL</h3>
 
-                                                                <h3>Rs.5400.00</h3>
+                                                                <h3 id="final">Rs.5400.00</h3>
 
 
                                                           </div>
@@ -444,7 +495,7 @@
 
                                                           <div id="pay">
 
-                                                            <button>Proceed To Payment</button>
+                                                               <button id="payment">Proceed To Payment</button> 
 
 
 
@@ -721,3 +772,5 @@
 
 <!-- 
 <script src="Javascript Files/Wishlist.js"></script> -->
+
+

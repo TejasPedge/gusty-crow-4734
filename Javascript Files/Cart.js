@@ -22,7 +22,6 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
             document.getElementById("Card-products-container").innerHTML = "";
 
 
-
            
 
 
@@ -190,7 +189,18 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
 
                                             let P5 = document.createElement("p");
 
-                                            P5.innerText = arr[i].swatches[0].colorName;
+
+                                            if (arr[i].swatches[0] == undefined) {
+
+                                                P5.innerText =  "blue";
+
+                                            }else {
+
+                                                P5.innerText = arr[i].swatches[0].colorName
+
+                                            }
+
+                                           
 
                                     Div4.append(P4,P5);
 
@@ -278,6 +288,26 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
 
                                         Span3.innerText = " delete_forever";
 
+                                        //////////////Delete Functionality///////////////////
+
+
+                                        Span3.addEventListener("click",function () {
+
+
+                                               
+                                        DeleteFromCart (i);
+
+                                        })
+
+
+
+
+
+
+
+
+
+
                         Div8.append(Span3);
 
 
@@ -314,7 +344,7 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
 
     
 
-
+ let M = Cart_Data;
 
 
 
@@ -361,9 +391,7 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
 
         DisplayTotal(Cart_Data);
         
-
-
-
+    
         // console.log (Cart_Data);
 
 
@@ -430,8 +458,11 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
 
 
            
+
             DisplayTotal(Cart_Data);
-    
+
+
+
     
     
             console.log (Cart_Data);
@@ -493,25 +524,439 @@ let Cart_Data = JSON.parse(localStorage.getItem("Cart-Data")) || [];
 
 
 
-        if (Order_Value < 3000) {
+        let Delivery_charge = 0;
+
+
+
+        if (Order_Value <= 3000 && Order_Value > 0 ) {
 
                    Delivery_charge = 149;
 
 
-        }else if ()
+        }else if (Order_Value <= 6000 &&  Order_Value >= 300){
+
+
+                Delivery_charge = 300;
+
+        }else if (Order_Value > 6000) {
+
+                Delivery_charge = 400;
+
+        }else  {
+
+                Delivery_charge = 0
+        }
 
 
 
         let a = Order_Value.toLocaleString();
+
+        let b = Delivery_charge.toLocaleString();
+
+        let discount = 0;
+
+
+
+
+
+
+        
+
+        document.getElementById("Add").addEventListener("click", function (){
+
+                      
+                Addcoupon(a,b,discount)
+
+
+
+
+        } );
+
+               //{
+
+// // // // // / // // // // // // //data shifteed
+
+
+
+        // })
+
+        
+        localStorage.setItem("discount",discount);
+
+     
+
+        document.getElementById("Delivery-Charge").innerText = "Rs. " + b + ".00";
+
+
+        let z = "Rs. " + b + ".00"
+
+        localStorage.setItem("Delivery-Charge", z);
 
 
 
         document.getElementById("order-value").innerText = "Rs. " + a + ".00";
 
 
+        let y = "Rs. " + a + ".00";
+
+        localStorage.setItem("order-value", y);
+
+
+
+
+        // let Final_Price = discount + Number(b) + Number(a);
+
+        let nums = a.replace(",","");
+
+        Final_Price = Number(nums) + Number(b) + discount;
+
+        let nums2 = Final_Price.toLocaleString();
+
+        document.getElementById("final").innerText = "Rs. " + nums2 + ".00";
+
+        let x = "Rs. " + nums2 + ".00";
+
+        localStorage.setItem("Total-values", x);
+
+
+
+
+
+
+
 }
 
 
 DisplayTotal(Cart_Data);
+
+
+
+
+
+// // // // // // // // // // // Add coupon Functionality // // // // // / // // // // // // 
+
+
+
+
+
+
+
+
+function Addcoupon(a,b,discount){
+
+
+  
+
+
+                
+        let x = document.getElementById("Coupon-code");
+
+        let Coupon_VAlue = x.value;
+
+
+        let n =  a.replace(",","")
+
+        console.log (n);
+
+
+        if (Coupon_VAlue == "Masai2000" &&  n > 3000) {
+
+                alert("Your Coupon is applied");
+
+                document.getElementById("Discount").innerText = "- Rs. 2000.00";
+
+                discount = -2000;
+
+                localStorage.setItem("discount",discount);
+
+                document.getElementById("Coupon-code").value = "";
+
+        
+
+                     let Div = document.createElement("div");
+
+                     Div.setAttribute("id", "Discound-applied");
+
+                           let IMG = document.createElement("img");
+
+                           IMG.setAttribute("src","https://thelogofinder.com/wp-content/uploads/edd/2022/03/Masai.svg");
+
+                           let H3 = document.createElement("h3");
+
+                           H3.innerText = "2000";
+
+                           let Span = document.createElement("span");
+
+                           Span.setAttribute("class","material-symbols-rounded");
+
+                           Span.innerText = "close";
+
+                           Span.addEventListener("click",function(){
+
+                                document.getElementById("coupons").innerHTML="";
+
+                                document.getElementById("Discount").innerText = "- Rs. 00.00";
+
+
+      
+                                                        
+                                        let nums = a.replace(",","");
+
+                                        Final_Price = Number(nums) + Number(b) + 0;
+                                
+                                        let nums2 = Final_Price.toLocaleString();
+                                
+
+                                        document.getElementById("final").innerText = "Rs. " + nums2 + ".00";
+                                                
+                                                
+                                
+                                
+
+                           });
+
+
+                     Div.append(IMG,H3,Span);
+
+                     document.getElementById("coupons").append(Div);
+
+
+
+                     let nums = a.replace(",","");
+
+                     Final_Price = (Number(nums) + Number(b)) + discount;
+             
+                     let nums2 = Final_Price.toLocaleString();
+             
+                     document.getElementById("final").innerText = "Rs. " + nums2 + ".00";
+
+                     let x =  "Rs. " + nums2 + ".00";
+
+                     localStorage.setItem("Total-values",x);
+
+                     
+        
+               
+
+        }else  if (Coupon_VAlue == "Masai2000" && n < 3000){
+
+                alert("This Coupon is Applicable on Shopping of Rs. 3,000 or More");
+
+        }else {
+
+
+                 alert("Invalid Coupon");
+
+        }
+
+
+           console.log ( Coupon_VAlue);
+
+
+
+
+
+}
+
+
+
+
+
+
+/////////////////////////////Deletefrom Cart //////////////////////////////////
+
+
+
+
+function DeleteFromCart (index) {
+
+
+
+        Cart_Data.splice(index,1);
+
+
+        console.log( Cart_Data);
+
+        localStorage.setItem("Cart-Data", JSON.stringify ( Cart_Data ));
+
+        document.getElementById("Card-products-container").innerHTML = "";
+
+        alert("item Removed From Cart");
+
+       if (Cart_Data.length == 0) {
+
+                  
+              document.getElementById("Price").innerHTML = "";
+
+
+             
+ if (Cart_Data.length == 0) {
+
+                  
+        document.getElementById("Price").innerHTML = "";
+
+
+
+                let Div = document.createElement("div");
+
+                Div.setAttribute("id","No-Card-products");
+
+                     let H1 = document.createElement("h1");
+
+                     H1.innerText = "Your Shopping Cart Is Empty";
+
+                     let P = document.createElement  ("p");
+
+                     P.innerText = "Sign in to save or access already saved items in your shopping bag.";
+
+                     let Button = document.createElement("button");
+
+                     Button.innerText = "Sign in";
+
+                 Div.append(H1,P,Button);
+
+                 document.getElementById("Card-products-container").append(Div);
+
+                
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       }
+
+
+       document.getElementById("final").innerText = "Rs. " + "00" + ".00";
+
+
+        
+       console.log(Cart_Data)
+
+        DisplayTotal(Cart_Data);
+
+        Display_Cart_Data( Cart_Data );
+
+
+
+
+
+
+
+ }
+
+
+ if (Cart_Data.length == 0) {
+
+                  
+        document.getElementById("Price").innerHTML = "";
+
+
+                let Div = document.createElement("div");
+
+                Div.setAttribute("id","No-Card-products");
+
+                     let H1 = document.createElement("h1");
+
+                     H1.innerText = "Your Shopping Cart Is Empty";
+
+                     let P = document.createElement  ("p");
+
+                     P.innerText = "Sign in to save or access already saved items in your shopping bag.";
+
+                     let Button = document.createElement("button");
+
+                     Button.innerText = "Sign in";
+
+                 Div.append(H1,P,Button);
+                 
+
+                 document.getElementById("Card-products-container").append(Div);
+
+ }
+
+
+
+
+ // ///////////////////////////////Proceed to Payment Functionality /////////////////////////////////////////
+
+
+       document.getElementById ("payment").addEventListener("click",ProceedtoPay) ;
+
+
+
+
+     function ProceedtoPay () {
+
+
+        if (Cart_Data.length == 0) {
+
+ 
+                  alert("Please Add Some Items to Cart")
+
+
+
+
+        }else {
+
+
+                 document.getElementById("pay").innerText = "";
+
+
+                 let A = document.createElement ("a");
+
+                 A.setAttribute("href","Payment.html");
+
+                 let Button = document.createElement("button");
+
+                 Button.innerText = "Proceed To Payment";
+
+                 A.append(Button);
+
+
+                 document.getElementById("pay").append(A);
+
+
+
+
+
+
+
+        }
+
+
+                
+             
+
+
+     }
+
+
 
 

@@ -1,0 +1,783 @@
+#User > a:nth-child(1) > span{
+
+
+    color: rgb(18, 152, 255);
+
+  }
+
+
+  #image > ul > li  {
+
+
+    color: white;
+
+    border: 2px solid rgba(57, 82, 135, 0.648);
+
+    border-radius: 20px;
+
+    width: 100px;
+
+    text-align: center;
+
+
+
+}
+
+#image > ul > li:nth-child(1) {
+
+  
+    border: 2px solid rgba(57, 82, 135, 0.648);
+
+
+
+} 
+ 
+#image > ul > li:nth-child(1):hover {
+
+    box-shadow: 1px 1px 3px rgb(6, 176, 255);
+
+    
+    border-color: rgb(18, 152, 255);
+
+    cursor: pointer;
+
+} 
+  
+
+ #Card-product-container{
+
+/* 
+       border: 2px solid green;
+ */
+
+       padding-top: 70px;
+
+       margin-bottom: 100px;
+
+
+
+
+  }
+
+
+
+  #Card-product-container2{
+
+
+           /* border: 2px solid red; */
+
+           width: 90%;
+
+           margin: auto;
+
+
+
+
+  }
+
+  #Card-product-container2 > h1{
+
+        text-align: center;
+
+        font-size: 40px;
+
+        color: rgb(0, 139, 232);
+     
+  }
+
+
+  #Card-product-container2 > h1 + hr {
+
+
+            width: 90%;
+
+            margin: auto;
+
+            margin-top: 10px;
+
+            color: bisque;
+
+            border: none;
+
+            border-bottom: 2px solid rgba(0, 255, 251, 0.287);
+
+  }
+
+
+  #Card-product-container3 {
+
+
+/* 
+    border : 2px solid yellow; */
+
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 30px;
+
+
+  }
+
+
+
+
+  #Payment-Details {
+
+/* 
+    border: 2px solid black; */
+
+    width: 27%;
+
+    padding: 20px;
+
+    background-color: rgb(33, 51, 93);
+
+    border-radius: 10px;
+
+    height: 710px;
+
+    box-shadow: 2px 2px 20px;
+
+
+
+  }
+
+
+  #Payment-Details > p {
+
+           margin-bottom: 10px;
+
+           color: rgb(255, 255, 255);
+  }
+
+
+  #Payment-Details > input{
+
+
+    padding: 5px;
+
+    width: 180px;
+
+    background-color: rgb(33, 51, 93);
+
+    border: 2px solid rgba(255, 255, 255, 0.475);
+
+    color: rgb(240, 240, 240);
+
+    margin-right: 20px;
+
+    margin-bottom: 10px;
+
+    
+  }
+
+
+  #Payment-Details > button {
+
+
+    padding: 5px;
+
+    width: 120px;
+
+    border-radius: 10px;
+
+    background-color: rgb(5, 5, 46);
+
+    color: white;
+
+    font-size: large;
+  }
+
+
+
+  #Payment-Details > button:hover {
+
+            border: 2px solid aquamarine;
+
+
+
+  }
+
+
+  #Payment-Details > button:nth-child(5){
+
+
+        background-color: rgba(0, 0, 0, 0);
+
+  }
+
+
+  #Price{
+/* 
+           border: 2px solid green; */
+
+           margin-top: 30px;
+
+           margin-bottom: 40px;
+
+  }
+
+  #Price > div {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: rgb(252, 252, 252);
+
+            margin-bottom: 5px;
+
+  }
+
+
+  #Payment-Details > hr {
+
+         border: none;
+
+
+         border-bottom: 2px solid white;
+
+
+
+
+
+
+  }
+
+
+  #Total {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      margin-top: 15px;
+
+      color: white;
+
+  }
+
+
+ 
+
+  #pay > button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            font-size: larger;
+
+            color: white;
+
+            background-color: rgba(0, 0, 0, 0);
+
+            box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.495);
+
+            border-radius: 5px;
+
+            margin-bottom: 10px;
+
+            border: 1px solid rgb(255, 255, 255);
+
+          
+  }
+
+
+  #pay > button:hover {
+
+    
+
+      cursor:pointer;
+
+
+      background-color: rgba(0, 0, 0, 0.716);
+
+
+  }
+
+
+  #delivery {
+
+       color: rgb(0, 0, 0);
+
+       display: flex;
+
+       align-items: center;
+
+       width: 200px;
+
+       justify-content: space-between;
+
+       padding-left: 20px;
+
+       padding-right: 20px;
+
+       background-color: aliceblue;
+
+       border-radius: 10px;
+
+       margin-bottom: 10px;
+
+       border: 2px solid rgb(0, 255, 174);
+
+
+
+  }
+
+
+  #delivery > img {
+
+           width: 30px;
+
+
+  }
+
+
+  #delivery2{
+
+
+    color: rgb(0, 0, 0);
+
+       display: flex;
+
+       border: 2px solid rgb(0, 255, 174);
+
+       align-items: center;
+
+       width: 200px;
+
+       justify-content: space-between;
+
+       padding-left: 20px;
+
+       padding-right: 20px;
+
+       background-color: aliceblue;
+
+       border-radius: 10px;
+
+       margin-bottom: 20px;
+
+
+
+
+  }
+
+
+  #delivery2 > img {
+
+    width: 30px;
+
+
+}
+
+
+#Card-products > img {
+
+
+     width: 120px;
+
+     border-radius: 10px;
+
+     box-shadow: 2px 2px 10px;
+
+
+
+}
+
+
+#Card-products {
+
+
+    border: 2px solid rgb(0, 255, 217);
+
+    width: 100%;
+
+    height: 200px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px;
+
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 20px;
+
+    margin-bottom: 30px;
+
+  
+
+
+}
+
+
+
+#Detailsis {
+
+     /* border: 2px solid violet; */
+
+     width: 24%;
+
+     color: white;
+
+     margin-top: 20px;
+
+     padding-left: 10px;
+
+
+}
+
+
+#Detailsis > div {
+
+
+    display: flex;
+
+    width: 200px;
+
+    justify-content: space-between;
+
+    margin-bottom: 5px;
+
+
+
+}
+
+
+#Detailsis > h3 {
+
+
+    margin-top: 5px;
+}
+
+#Detailsis > p {
+
+
+   margin-top: 5px;
+
+}
+
+
+
+
+
+
+
+#Quantity {
+
+       display: flex;
+
+
+       align-items: center;
+
+       justify-content: space-between;
+/* 
+       border: 2px solid green; */
+
+       width: 250px;
+      
+       padding-left: 60px;
+
+       padding-right: 60px;
+
+}
+
+#Quantity > div {
+
+
+    background-color: rgb(179, 128, 128);
+
+    width: 120px;
+
+    display: flex;
+
+    justify-content: center;
+
+    
+    height: 20px;
+
+    padding: 5px;
+
+    font-weight: 600;
+
+    border-radius: 20px;
+
+    border: 2px solid aqua;
+
+    box-shadow: 2px 2px 20px;
+    
+
+}
+
+
+#Quantity > span {
+
+
+    border: 2px solid aqua;
+
+    background-color: black;
+
+    padding: 3px;
+       
+    border-radius: 50%;
+
+    box-shadow: 2px 2px 20px black;
+
+}
+
+
+
+
+#deleteit {
+
+
+     padding: 10px;
+
+}
+
+
+#deleteit > span {
+
+
+          color: rgb(255, 0, 0);
+
+
+}
+
+
+#deleteit > span:hover {
+
+   
+    color: rgb(0, 255, 166);
+
+
+
+}
+
+
+
+/* 
+#Card-products-container {
+
+         border: 2px solid green;
+
+
+
+
+}  */
+
+
+
+#Discound-applied {
+
+
+
+      width: 150px;
+
+      position: absolute;
+
+      height: 22px;
+
+      top: 520px;
+
+      left: 1002px;
+
+      display: flex;
+
+
+      align-items: center;
+
+     
+      justify-content: space-between;
+
+      align-items: center;
+
+      background-color: rgb(7, 78, 149);
+
+      border-radius: 30px;
+
+      padding-left:10px ;
+
+      padding-right: 5px;
+
+      border: 1px solid rgba(0, 255, 208, 0.522);
+
+      box-shadow: 2px 2px 10px;
+
+
+
+}
+
+
+#Discound-applied > .material-symbols-rounded {
+
+  color: black;
+
+}
+
+#Discound-applied > img {
+
+
+   width: 70px;
+
+}
+
+
+#Discound-applied > h3{
+
+
+        padding: 0px;
+
+        margin: 0px;
+
+}
+
+#Discound-applied >span:hover{
+
+    color: rgb(0, 255, 149);
+
+
+}
+
+
+
+
+
+#No-Card-products {
+
+
+  border: 2px solid rgb(0, 255, 217);
+
+  width: 700px;
+
+  height: 200px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content:center ;
+
+
+
+
+
+  padding: 10px;
+
+  border-radius: 20px;
+
+  box-shadow: 2px 2px 20px;
+
+  margin-bottom: 30px;
+
+}
+
+
+#No-Card-products >h1{
+
+           color: white;
+
+
+           margin-left: 20px ;
+
+           margin-bottom: 10px;
+           
+
+
+}
+
+
+#No-Card-products > p {
+
+ 
+     color: white;
+
+     
+     margin-left: 20px ;
+
+     margin-bottom: 20px;
+
+}
+
+
+#No-Card-products > button {
+
+
+        width: 40%;
+
+        padding: 10px;
+
+        font-size: larger;
+
+           
+        margin-left: 20px ;
+
+        background-color: black;
+
+        color: aliceblue;
+
+        border: 2px solid gray;
+
+        font-weight: 600;
+
+        border-radius: 10px;
+
+
+}
+
+
+
+#No-Card-products > button:hover{
+
+
+               background-color: rgba(17, 5, 36, 0.613);
+
+               cursor: pointer;
+
+
+}
+
+
+
+
+
+
+#pay > a > button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  font-size: larger;
+
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.495);
+
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid rgb(255, 255, 255);
+
+
+}
+
+
+#pay > a > button:hover {
+
+
+
+cursor:pointer;
+
+
+background-color: rgba(0, 0, 0, 0.716);
+
+
+}

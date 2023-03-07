@@ -1,2 +1,2 @@
 # gusty-crow-4734
-Unit - 2 Construct Week Project
+It is An E-commerce Website Project : built with HTML5 | CSS3 | Vanilla JS  
